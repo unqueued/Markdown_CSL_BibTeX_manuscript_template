@@ -18,6 +18,11 @@ pdf:
 	  --variable urlcolor=cyan \
 	  $(MARKDOWN_FILE)
 
+pdf_basic:
+	pandoc -o $(PDF_FILE) \
+	  --bibliography $(REF_LIB_FILE) \
+	  $(MARKDOWN_FILE)
+
 docx:
 	pandoc -o $(DOCX_FILE) \
 	  --bibliography $(REF_LIB_FILE) \
