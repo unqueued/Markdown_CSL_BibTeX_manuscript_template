@@ -14,6 +14,8 @@ pdf:
 	pandoc -o $(PDF_FILE) \
 	  --bibliography $(REF_LIB_FILE) \
 	  --csl $(CLS_FILE) \
+	  --metadata link-citations \
+	  --variable urlcolor=cyan \
 	  $(MARKDOWN_FILE)
 
 docx:
